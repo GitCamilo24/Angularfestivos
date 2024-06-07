@@ -1,0 +1,27 @@
+
+@import '../node_modules/@swimlane/ngx-datatable/themes/bootstrap.css';
+@import '../node_modules/@swimlane/ngx-datatable/themes/material.css';
+@import '../node_modules/@swimlane/ngx-datatable/themes/dark.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    background-color: rgb(239, 245, 247);
+}
+
+.barraTitulo{
+    background: rgb(20, 19, 20);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.center{
+    text-align: center; /* Centrar horizontalmente */
+    display: flex; /* Utilizamos flexbox para centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente con flexbox */
+    width: 100%; /* Ancho completo */ 
+
+}
+.mat-toolbar.mat-primary {
+    background: #4c079b;
+    color: #f7f0f0;
+}

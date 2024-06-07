@@ -1,0 +1,48 @@
+<!-- En tu archivo fecha-festivos.component.html -->
+<br>
+<div class="center">
+
+<mat-tab-group>
+    
+    <mat-tab label="Listar">
+        <br>
+      <!-- Input para buscar -->
+    
+      <mat-form-field>
+        <mat-label>Buscar por año</mat-label>
+        <input matInput type="number" [(ngModel)]="textoBusqueda" />
+      </mat-form-field>
+      <!-- Botón para listar -->
+      
+      <br>
+    
+      
+      <button mat-stroked-button color="primary" (click)="listar()">Listar</button>
+      <!-- Tabla para mostrar los festivos -->
+      
+      
+    </mat-tab>
+    <mat-tab label="Verificar">
+      <!-- Input para seleccionar fecha -->
+      <br>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Fecha" [(ngModel)]="fechaSeleccionada" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <!-- Botón para verificar festivos -->
+      <button mat-stroked-button color="accent" (click)="verificar()">Verificar</button>
+      <!-- Tabla para mostrar los festivos -->
+      
+    </mat-tab>
+    
+  </mat-tab-group>
+</div>
+
+<br>
+
+<ngx-datatable class="dark" [rows]="festivos" [columns]="columnas" [rowHeight]="'auto'" [columnMode]="modoColumna.force"
+        [limit]="10" [selectionType]="tipoSeleccion.single"
+      ></ngx-datatable>
+
+      
